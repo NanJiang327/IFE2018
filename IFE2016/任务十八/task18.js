@@ -2,13 +2,21 @@ var task18  = {
 	taskArr: [10, 3, 20, 11],
 	number : /^\d+$/,
 	leftPush: function (num) {
-		this.taskArr.unshift(num);
-		renderArr();
+		if (this.taskArr.length >= 60){
+			alert('队列长不能超过60')
+		} else {
+			this.taskArr.unshift(num);
+			renderArr();
+		}
 	},
 
 	rightPush: function (num) {
-		this.taskArr.push(num);
-		renderArr();
+		if (this.taskArr.length >= 60){
+			alert('队列长不能超过60')
+		} else {
+			this.taskArr.push(num);
+			renderArr();
+		}
 	},
 
 	leftPop: function () {
@@ -57,7 +65,8 @@ function renderArr(){
 	} else {
 		for (var i = 0; i < task18.taskArr.length; i++) {
 			var span = document.createElement('span');
-			span.textContent = task18.taskArr[i];
+			span.style.height = task18.taskArr[i]+'px';
+			span.style.width = 100 / task18.taskArr.length+'px'
 			arr.appendChild(span);
 		}
 	}
@@ -72,20 +81,19 @@ function initBtns() {
 	var inputs = document.getElementsByTagName('input');
 	addEventHandler(buttons[0], 'click', function() {
 		var input = inputs[0].value;
-		if (task18.number.test(input)){
-			console.log(task18.number.test('sd'));
+		if (task18.number.test(input) || 10 <= input <= 100){
 			task18.leftPush(input);
 		} else {
-			alert('请输入一个整数');
+			alert('请输入一个10到100的整数');
 		}
 	})
 
 	addEventHandler(buttons[1], 'click', function() {
 		var input = inputs[0].value;
-		if (task18.number.test(input)){
+		if (task18.number.test(input) ||  10 <= input <= 100){
 			task18.rightPush(input);
 		} else {
-			alert('请输入一个整数');
+			alert('请输入一个10到100的整数');
 		}
 	})
 
