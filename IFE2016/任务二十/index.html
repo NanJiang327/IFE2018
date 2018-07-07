@@ -38,20 +38,30 @@
 </head>
 <body>
 	<div>
-		<textarea name="" id="content" cols="30" rows="10"></textarea>
+		<textarea name="" id="content" cols="20" rows="10"></textarea>
 		<button id="submit">确认</button>
+		<button id="sort">排序</button>
 		<input id="searchInput" type="text">
 		<button id="search">搜索</button>
 	</div>
 	<div class="arr"></div>
 	<script>
-		$ = function (el) { document.querySelector(el)};
-		$All = function(el) { document.querySelectorAll(el)};
-		task20 = {
+		$ = function (el) { return document.querySelector(el)};
+		$All = function(el) { return document.querySelectorAll(el)};
+		var task20 = {
 			number : /^\d+$/,
 			symbol: /[,_\s*\n\r.=+]/,
 			arr : [],
+		}
 
+		/**
+		 * 随机生成数据
+		 */
+		function randomBuildData() {
+			for (var i = 0; i < 10; i++){
+				var num = Math.ceil(Math.random() * 91 +9);
+				task20.arr.push(num.toString());
+			}
 		}
 
 		/**
@@ -68,15 +78,67 @@
 			}
 		}
 
+
+		/**
+		 * 渲染函数
+		 */
+		function render(match) {
+			$('.arr').innerHTML =
+				task20.arr.map(function (d) {
+					var r = d;
+					if (match != null && match.length > 0){
+						console.log(typeof r);
+						r = r.replace(new RegExp(match,'g'),"<span class='select'>" + match + "</span>");
+					}
+					return "<span>" + r + "</span>";
+				}).join('');
+		}
+
+
+		/**
+		 *
+		 * @param arr
+		 * 冒泡排序
+		 */
+		function sortArr(arr) {
+			for (var i = 0; i < arr.length - 1; i++){
+				for (var j = i + 1; j < arr.length; j++){
+					if (arr[i] > arr[j]){
+						var temp = arr[i];
+						arr[i] = arr[j];
+						arr[j] = temp;
+					}
+				}
+			}
+		}
+
 		function initBtns() {
 			var textArea = $('#content');
 			var input = $('#searchInput');
 
 			addEventHandler($('#submit'),'click',function () {
+				var splitArr = textArea.value.split(task20.symbol);
+				 for (var i = 0; i < splitArr.length; i++){
+				 	task20.arr.push(splitArr[i]);
+				 }
 			});
 
 			addEventHandler($('#search'),'click',function () {
+				render(input.value);
 			});
+
+			addEventHandler($('#sort'),'click',function () {
+				if (task20.arr.length > 0){
+					sortArr(task20.arr);
+					render();
+				}
+			});
+		}
+
+		window.onload = function () {
+			randomBuildData();
+			initBtns();
+			render();
 		}
 
 	</script>
