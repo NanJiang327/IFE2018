@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>任务十八</title>
 	<style>
-		.ctrlSet button{
+		button {
 			border-radius: 5px;
 		}
 
@@ -16,6 +16,7 @@
 			display: flex;
 			width: 90%;
 			height: 150px;
+			flex-wrap: wrap;
 			justify-content: center;
 			align-items: flex-end;
 			align-content: center;
@@ -30,20 +31,26 @@
 			color: #fff;
 			font-size: 16px;
 			padding: 10px;
+			margin-top: 5px;
 			margin-right: 20px;
 		}
 	</style>
 </head>
 <body>
 	<div class="ctrlSet">
-		<input type="text">
+		<textarea type="text"></textarea>
 		<button class="arrBtn">左侧入</button>
 		<button class="arrBtn">右侧入</button>
 		<button class="arrBtn">左侧出</button>
 		<button class="arrBtn">右侧出</button>
+		<button class="arrBtn">排序</button>
 	</div>
 	<div class="arr">
 
+	</div>
+	<div>
+		<input type="text">
+		<button class="arrBtn">查询</button>
 	</div>
 	<script src="task18.js"></script>
 </body>

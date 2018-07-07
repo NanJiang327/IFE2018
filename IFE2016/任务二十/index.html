@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task 20</title>
+	<style>
+		button {
+			border-radius: 5px;
+		}
+
+		.ctrlSet button:nth-of-type(3){
+			margin-left: 20px;
+		}
+
+		.arr {
+			display: flex;
+			width: 90%;
+			height: 150px;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: flex-end;
+			align-content: center;
+			margin: 10px auto;
+			padding: 10px;
+			border: 2px solid #000;
+		}
+
+		.arr span {
+			flex: 1;
+			background: #ff0000;
+			color: #fff;
+			font-size: 16px;
+			padding: 10px;
+			margin-top: 5px;
+			margin-right: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<textarea name="" id="content" cols="30" rows="10"></textarea>
+		<button id="submit">确认</button>
+		<input id="searchInput" type="text">
+		<button id="search">搜索</button>
+	</div>
+	<div class="arr"></div>
+	<script>
+		$ = function (el) { document.querySelector(el)};
+		$All = function(el) { document.querySelectorAll(el)};
+		task20 = {
+			number : /^\d+$/,
+			symbol: /[,_\s*\n\r.=+]/,
+			arr : [],
+
+		}
+
+		/**
+		 * addEventHandler方法
+		 * 跨浏览器实现事件绑定
+		 */
+		function addEventHandler(ele, event, handler) {
+			if (ele.addEventListener){
+				ele.addEventListener(event, handler, false);
+			} else if (ele.attachEvent){
+				ele.attachEvent("on"+event, handler);
+			} else {
+				ele["on" + event] = handler;
+			}
+		}
+
+		function initBtns() {
+			var textArea = $('#content');
+			var input = $('#searchInput');
+
+			addEventHandler($('#submit'),'click',function () {
+			});
+
+			addEventHandler($('#search'),'click',function () {
+			});
+		}
+
+	</script>
+</body>
+</html>
