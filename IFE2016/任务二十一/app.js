@@ -61,20 +61,31 @@ function sortArr(arr) {
 	}
 }
 
-function Tag(name){
+function Tag(name, el){
 	this.name = name;
+	this.el = el;
 }
 
 Tag.prototype = {
 	constructor: Tag,
 	init: function () {
-		this
+		addEventHandler(this.el, 'mouseover', function (event) {
+			event.target.textContent = '删除: '+ event.target.textContent;
+		});
+		
+		addEventHandler(this.el, 'mouseout', function (event) {
+			event.target.textContent = event.target.textContent.replace(/删除: /, '');
+		});
+		
+		addEventHandler(this.el, 'click', function (event) {
+			this.el.parentNode.removeChild(event.target);
+		})
 	}
 }
 
 function initBtn(){
 	addEventHandler($('#submit'),'click', function () {
-		
+
 
 	})
 }
@@ -83,8 +94,10 @@ function initInput(){
 
 }
 
-function checkLength(arr){
-	return arr.length >= 10;
+function checkInput(arr){
+	for (var i = 0; i < arr.length; i++){
+
+	}
 }
 
 function checkRepeat(){
