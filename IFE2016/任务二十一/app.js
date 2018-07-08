@@ -1,19 +1,33 @@
 $ = function (el) { return document.querySelector(el)};
 $All = function(el) { return document.querySelectorAll(el)};
-var task20 = {
-	number : /^\d+$/,
-	symbol: /[,_\s*\n\r.=+]/,
-	arr : [],
+var task21 = {
+	skillList : [],
+	hobbyList : []
+}
+/**
+ *
+ * @param obj
+ * @returns {boolean}
+ * 为Array原型添加一个检查内容是否在数组中的方法
+ */
+Array.prototype.in_array = function (obj) {
+	var i = this.length;
+	while (i--) {
+		if (this[i] === obj) {
+			return true;
+		}
+	}
+	return false;
 }
 
-/**
- * 随机生成数据
- */
-function randomBuildData() {
-	for (var i = 0; i < 10; i++){
-		var num = Math.ceil(Math.random() * 91 +9);
-		task20.arr.push(num.toString());
+function getData(type) {
+	if (type === 'skill') {
+		var value = $('#tagInput').value.match(/(^[^,\,  ]*)/)[0];
+
+	} else {
+		var value = $('#hobbyInput').value.trim().split(/,|\s|\n|\r|\t/);
 	}
+	return value;
 }
 
 /**
@@ -29,23 +43,6 @@ function addEventHandler(ele, event, handler) {
 		ele["on" + event] = handler;
 	}
 }
-
-
-/**
- * 渲染函数
- */
-function render(match) {
-	$('.arr').innerHTML =
-		task20.arr.map(function (d) {
-			var r = d;
-			if (match != null && match.length > 0){
-				console.log(typeof r);
-				r = r.replace(new RegExp(match,'g'),"<span class='select'>" + match + "</span>");
-			}
-			return "<p>" + r + "</p>";
-		}).join('');
-}
-
 
 /**
  *
@@ -64,62 +61,32 @@ function sortArr(arr) {
 	}
 }
 
-function initBtns() {
-	var textArea = $('#content');
-	var input = $('#searchInput');
-
-	addEventHandler($('#submit'),'click',function () {
-		var splitArr = textArea.value.split(task20.symbol);
-		for (var i = 0; i < splitArr.length; i++){
-			task20.arr.push(splitArr[i]);
-		}
-		render();
-	});
-
-	addEventHandler($('#search'),'click',function () {
-		render(input.value);
-	});
-
-	addEventHandler($('#sort'),'click',function () {
-		if (task20.arr.length > 0){
-			sortArr(task20.arr);
-			render();
-		}
-	});
-}
-
-window.onload = function () {
-		randomBuildData();
-		initBtns();
-		render();
-}
-
-
-function Tag(input, output, button) {
-	this.input = $('#'+input);
-	this.output = $('#'+output);
-	this.button = $('#'+button);
+function Tag(name){
+	this.name = name;
 }
 
 Tag.prototype = {
 	constructor: Tag,
-	trim:function () {
-
-	},
-
-	checkRepeat: function () {
-
-	},
-
-	checkLength: function () {
-
-	},
-
-	render: function () {
-
+	init: function () {
+		this
 	}
+}
 
+function initBtn(){
+	addEventHandler($('#submit'),'click', function () {
+		
 
+	})
+}
 
+function initInput(){
+
+}
+
+function checkLength(arr){
+	return arr.length >= 10;
+}
+
+function checkRepeat(){
 
 }
