@@ -1,0 +1,43 @@
+button {
+	border-radius: 5px;
+}
+
+textarea {
+	resize: none;
+}
+
+.showarea {
+	width: 95%;
+	height: 100px;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+	align-content: center;
+	margin: 10px auto;
+	padding: 10px;
+	border: 2px solid #000;
+}
+
+.showarea div {
+	display: inline-block;
+	animation: fadeIn 1s;
+	text-align: center;
+	margin-right: 5px;
+	padding: 5px;
+	background: #38a76a;
+	color: #fff;
+}
+
+.showarea div:hover{
+	background: #38a;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
