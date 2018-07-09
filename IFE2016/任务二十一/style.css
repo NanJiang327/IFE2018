@@ -24,12 +24,19 @@ textarea {
 	text-align: center;
 	margin-right: 5px;
 	padding: 5px;
-	background: #38a76a;
 	color: #fff;
 }
 
-.showarea div:hover{
-	background: #38a;
+#skill div{
+	background: #5CC9F5;
+}
+
+#hobby div{
+	background: #f1ac2b;
+}
+
+#hobby div:hover, #skill div:hover{
+	background: #ff0000;
 }
 
 @keyframes fadeIn {

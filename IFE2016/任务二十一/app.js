@@ -4,21 +4,6 @@ var task21 = {
 	skillList : [],
 	hobbyList : []
 }
-/**
- *
- * @param obj
- * @returns {boolean}
- * 为Array原型添加一个检查内容是否在数组中的方法
- */
-Array.prototype.in_array = function (obj) {
-	var i = this.length;
-	while (i--) {
-		if (this[i] === obj) {
-			return true;
-		}
-	}
-	return false;
-}
 
 function getData(type) {
 	if (type === 'skill') {
@@ -44,62 +29,103 @@ function addEventHandler(ele, event, handler) {
 	}
 }
 
-/**
- *
- * @param arr
- * 冒泡排序
- */
-function sortArr(arr) {
-	for (var i = 0; i < arr.length - 1; i++){
-		for (var j = i + 1; j < arr.length; j++){
-			if (arr[i] - arr[j] >= 0){
-				var temp = arr[i];
-				arr[i] = arr[j];
-				arr[j] = temp;
-			}
-		}
-	}
-}
-
-function Tag(name, el){
+function Tag(name, el, type){
 	this.name = name;
 	this.el = el;
+	this.type = type;
 }
 
 Tag.prototype = {
 	constructor: Tag,
-	init: function () {
-		addEventHandler(this.el, 'mouseover', function (event) {
+	initEvent: function () {
+		var self = this;
+		addEventHandler(self.el, 'mouseover', function (event) {
 			event.target.textContent = '删除: '+ event.target.textContent;
 		});
 		
-		addEventHandler(this.el, 'mouseout', function (event) {
+		addEventHandler(self.el, 'mouseout', function (event) {
 			event.target.textContent = event.target.textContent.replace(/删除: /, '');
 		});
 		
-		addEventHandler(this.el, 'click', function (event) {
-			this.el.parentNode.removeChild(event.target);
+		addEventHandler(self.el, 'click', function (event) {
+			event.target.textContent = event.target.textContent.replace(/删除: /, '');
+			delData(event, self.type);
 		})
 	}
 }
 
 function initBtn(){
 	addEventHandler($('#submit'),'click', function () {
-
-
+		render('hobby');
+		$('#hobbyInput').value = '';
 	})
 }
 
 function initInput(){
-
+	addEventHandler($('#tagInput'),'keydown',function (e) {
+		// 获取keycode
+		var keyCode = e.keyCode;
+		if (/^32|13|188$/.test(keyCode)) {
+			render('skill');
+			$('#tagInput').value = '';
+		}
+	})
 }
 
-function checkInput(arr){
-	for (var i = 0; i < arr.length; i++){
+function render(type) {
+	var arr, el, tag, data = getData(type);
+	$('#'+type).innerHTML = '';
+	if (type === 'skill'){
+		arr = task21.skillList;
+		el = document.createElement('div');
+		el.textContent = data;
+		checkInput(arr, data);
+		tag = new Tag(data, el, type);
+		tag.initEvent();
+		arr.push(tag);
+		if (arr.length > 10) arr.shift();
 
+	} else {
+		arr = task21.hobbyList;
+		for (var i = 0; i < data.length; i++){
+			el = document.createElement('div');
+			el.textContent = data[i];
+			checkInput(arr, data[i]);
+			tag = new Tag(data[i], el, type);
+			tag.initEvent();
+			arr.push(tag);
+			if (arr.length > 10) arr.shift();
+		}
+	}
+
+	for (var j = 0; j < arr.length; j++){
+		$('#'+type).appendChild(arr[j].el);
 	}
 }
 
-function checkRepeat(){
+function checkInput(arr, input){
+	for (var i = 0; i < arr.length; i++){
+		if (arr[i].name.localeCompare(input) === 0){
+			arr.splice(i,1);
+		}
+	}
+}
 
+function delData(event, type){
+	var arr = type === 'skill' ? task21.skillList : task21.hobbyList;
+	var removeChild = event.target.parentNode.removeChild(event.target);
+
+	for (var i = 0; i < arr.length; i++){
+		if (arr[i].name.localeCompare(event.target.textContent) === 0){
+			arr.splice(i,1);
+		}
+	}
+	console.log(removeChild);
+	removeChild = null;
+	console.log(removeChild);
+}
+
+window.onload = function () {
+	initBtn();
+	initInput();
 }
