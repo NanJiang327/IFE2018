@@ -96,10 +96,41 @@ function buttonHandler(e) {
 	}, interval);
 }
 
+var selectedNode = null;
+function selectDelegate(e) {
+	var target = e.target || e.srcElement;
+	if (target.nodeType === 1){
+		if (selectedNode != null) selectedNode.style.background = '#fff';
+		if (selectedNode === target){
+			selectedNode.style.background = '#fff';
+			selectedNode = null;
+		} else {
+			selectedNode = target;
+			selectedNode.style.background = 'lightgreen';
+		}
+		stopBubble(e);
+	}
+}
+
+function deleteNode(){
+	if (selectedNode === null) return;
+	selectedNode.parentNode.removeChild(selectedNode);
+	selectedNode = null;
+}
+
+function addNode(){
+	if (selectedNode == null) return;
+	var newNode = document.createElement('div');
+	newNode.innerHTML = document.getElementById('newNodeText').value;
+	selectedNode.appendChild(newNode);
+}
 
 addEvent(document.getElementById('dfs'), 'click', buttonHandler);
 addEvent(document.getElementById('bfs'), 'click', buttonHandler);
 addEvent(document.getElementById('search'), 'click', buttonHandler);
+addEvent(document.getElementById('root'), 'click', selectDelegate);
+addEvent(document.getElementById('delete'), 'click', deleteNode);
+addEvent(document.getElementById('add'), 'click', addNode);
 
 
 // 跨浏览器事件函数
@@ -110,5 +141,13 @@ function addEvent(ele, event, handler) {
 		ele.attachEvent('on'+ event, handler);
 	} else {
 		ele['on'+ event] = handler;
+	}
+}
+
+function stopBubble(e) {
+	if (e.stopPropagation){
+		e.stopPropagation();
+	} else if (e.cancelBubble){
+		e.cancelBubble = true;
 	}
 }
