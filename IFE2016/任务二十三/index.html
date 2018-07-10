@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		div {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: space-around;
+			border:  1px solid #000;
+			box-sizing: border-box;
+			margin: 5px;
+			padding: 10px;
+			background: #fff;
+		}
+
+		br {
+			clear: left;
+		}
+
+		legend {
+			font-family: "Microsoft YaHei", sans-serif;
+			font-size: 20px;
+		}
+
+		.tn1, fieldset {
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div id="root" class="tn1">
+		Supper
+		<div class="tn2">Ruby
+			<div class="tn3">Apple
+				<div class="tn4">Pear</div>
+				<div class="tn4">Pig</div>
+				<div class="tn4">Cola</div>
+				<div class="tn4">Soccer</div>
+			</div>
+			<div class="tn3">Phone</div>
+			<div class="tn3">
+				<div class="tn4">Book</div>
+				<div class="tn4">School</div>
+			</div>
+		</div>
+		<div class="tn2">
+			Note
+			<div class="tn3">Human
+				<div class="tn4">Code</div>
+				<div class="tn4">Operate</div>
+				<div class="tn4">Man</div>
+			</div>
+			<div class="tn3">
+				Program
+				<div class="tn4">Boment
+					<div class="tn5">cat</div>
+				</div>
+				<div class="tn4">Glass</div>
+			</div>
+		</div>
+		<div class="tn2">Fish</div>
+	</div>
+<fieldsetr>
+	<legend>Tree</legend>
+	<button id="dfs">深度优先遍历</button>
+	<button id="bfs">广度优先遍历</button>
+	<span>Speed:</span>
+	<input type="radio" name="speed" value="fast" checked="checked">Fast
+	<input type="radio" name="speed" value="slow">Slow
+
+	<input type="text" id="searchText">
+	<button id="search">Search</button>
+</fieldsetr>
+	<script src="app.js"></script>
+</body>
+</html>
