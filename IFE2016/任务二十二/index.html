@@ -67,16 +67,45 @@
 <script>
 	var arr = [];
 	var tree = document.getElementsByClassName('box')[0];
-	function getListWithDLR() {
-		var loop = function (obj) {
-			if (obj){
-				arr.push(obj)
+	var timer = null;
 
+	function getListWithDLR(obj) {
+			if (obj){
+				arr.push(obj);
+				getListWithDLR(obj.firstElementChild);
+				getListWithDLR(obj.lastElementChild);
 			}
+	}
+
+	function changeColor(){
+		var i = 0;
+		arr[i].style.background = 'blue';
+		timer = setInterval(function () {
+			i++;
+			if (i < arr.length){
+				arr[i - 1].style.background = '#fff';
+				arr[i].style.background = 'blue';
+			} else {
+				clearInterval(timer);
+				arr[arr.length - 1].style.background = '#fff'
+			}
+		}, 500);
+	}
+
+	function reset(){
+		arr = [];
+		clearInterval(timer);
+		var divs = document.getElementsByTagName('div');
+		for (var i = 0; i < divs.length; i++){
+			divs[i].style.background = '#fff';
 		}
 	}
 
-	renderHtml(tree);
+	document.querySelector('#DLR').addEventListener('click', function () {
+		reset();
+		getListWithDLR(tree);
+		changeColor();
+	})
 
 </script>
 </html>
