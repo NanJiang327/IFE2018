@@ -1,6 +1,6 @@
 function TreeNode(obj) {
 	this.parent = obj.parent;
-	this.child = obj.childs || [];
+	this.childs = obj.childs || [];
 	this.data =obj.data || '';
 	this.selfElement = obj.selfElement;
 	this.selfElement.TreeNode = this; // 对应的DOM结点访问回来
@@ -33,6 +33,14 @@ TreeNode.prototype = {
 			} else { //改为不可见
 				this.selfElement.className = this.selfElement.className.replace('visible', 'hidden');
 			}
+		}
+
+		if (toHighlight) {
+			this.selfElement.getElementsByClassName('node-title')[0].className = 'node-title node-title-highlight';
+		}
+
+		if (deHighlight) {
+			this.selfElement.getElementsByClassName('node-title')[0].className = 'node-title';
 		}
 	},
 
@@ -115,7 +123,7 @@ TreeNode.prototype = {
 		// 判断节点是否处于折叠状态
 		isFolded: function () {
 			if (this.isLeaf()) return false; // 叶节点返回false
-			if (this.childs[0]/selfElement.className === 'nodebody-visible') return false;
+			if (this.childs[0].selfElement.className === 'nodebody-visible') return false;
 			return true;
 		}
 }
@@ -173,6 +181,7 @@ addEvent(document.getElementById('search'), 'click', function () {
 		for (var x = 0; x < resultList.length; x++){
 			pathNode = resultList[x];
 			pathNode.render(false, false, true, false);
+			// 展开父元素
 			while (pathNode.parent != null){
 				if (pathNode.selfElement.className === 'nodebody-hidden') pathNode.parent.toggleFold();
 				pathNode = pathNode.parent;

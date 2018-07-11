@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/IFE2016/任务二十五/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IFE2016/任务二十五/images/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IFE2016/任务二十五/images/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IFE2016/任务二十五/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFE2016/任务二十五/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/IFE2016/任务二十五/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IFE2016/任务二十五/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/IFE2016/任务二十五/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,20 +22,20 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/IFE2016/任务二十三/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="114">
+                <state relative-caret-position="-19">
                   <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/IFE2016/任务二十五/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+                <state relative-caret-position="391">
+                  <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
                   <folding>
                     <element signature="e#235#241#0" expanded="true" />
                     <element signature="e#494#500#0" expanded="true" />
@@ -65,8 +61,17 @@
           <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/IFE2016/任务二十五/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+                <state relative-caret-position="355">
+                  <caret line="154" selection-start-line="154" selection-end-line="154" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/IFE2016/任务二十五/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="53">
+                  <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -160,8 +165,8 @@
         <option value="$PROJECT_DIR$/IFE2016/任务二十三/index.html" />
         <option value="$PROJECT_DIR$/IFE2016/任务二十三/app.js" />
         <option value="$PROJECT_DIR$/IFE2016/任务二十五/style.css" />
-        <option value="$PROJECT_DIR$/IFE2016/任务二十五/app.js" />
         <option value="$PROJECT_DIR$/IFE2016/任务二十五/index.html" />
+        <option value="$PROJECT_DIR$/IFE2016/任务二十五/app.js" />
       </list>
     </option>
   </component>
@@ -392,12 +397,12 @@
       <workItem from="1530282378881" duration="2016000" />
       <workItem from="1530752056551" duration="112000" />
       <workItem from="1530752172241" duration="695000" />
-      <workItem from="1530755107647" duration="72085000" />
+      <workItem from="1530755107647" duration="74199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="639448000" />
+    <option name="totallyTimeSpent" value="641562000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -769,20 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IFE2016/任务二十五/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="93" column="1" selection-start-line="93" selection-start-column="1" selection-end-line="93" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/IFE2016/任务二十三/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IFE2016/任务二十三/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -790,22 +781,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IFE2016/任务二十五/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/IFE2016/任务二十五/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        <state relative-caret-position="391">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
           <folding>
             <element signature="e#235#241#0" expanded="true" />
             <element signature="e#494#500#0" expanded="true" />
             <element signature="e#500#506#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IFE2016/任务二十三/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IFE2016/任务二十五/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/IFE2016/任务二十五/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="154" selection-start-line="154" selection-end-line="154" />
         </state>
       </provider>
     </entry>
