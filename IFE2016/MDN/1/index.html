@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.content {
+			margin: 0 auto;
+			width: 40%;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<h1>Number guessing game</h1>
+		<p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or less. We'll tell you if your guess was too high or to low.</p>
+		<span>Enter a guess:</span>
+		<input type="text" class="guessInput">
+		<button class="submit">Submit guess</button>
+		<p class="userGuess"></p>
+		<p class="lowOrHi"></p>
+		<p class="result"></p>
+	</div>
+	<script>
+		$ = function (el) {
+			return 	document.querySelector(el);
+		}
+
+		e1 = {
+			count: 1,
+			input: $('.guessInput'),
+			button: $('.submit'),
+			result: $('.result'),
+			userGuess: $('.userGuess'),
+			lowOrHi: $('.lowOrHi'),
+			number: Math.floor(Math.random() * 99) + 1,
+			restGame: function () {
+				e1.input.disabled = true;
+				e1.button.disabled = true;
+				var restBtn = document.createElement('button');
+				restBtn.textContent = 'Reset';
+				$('.content').appendChild(restBtn);
+				restBtn.addEventListener('click', function () {
+					e1.count = 1;
+					e1.number = Math.floor(Math.random() * 99);
+					e1.userGuess.textContent = '';
+					e1.lowOrHi.textContent = '';
+					e1.result.textContent = '';
+					$('.content').removeChild(restBtn);
+					e1.button.disabled = false;
+					e1.input.disabled = false;
+					e1.input.value = '';
+					e1.input.focus();
+					e1.result.style.background = '#fff';
+				})
+
+			},
+			checkResult: function () {
+				var userInput = Number(e1.input.value);
+				if (e1.count === 1){
+					e1.userGuess.textContent = 'Previous guess: ';
+				}
+				e1.userGuess.textContent += userInput + ' ';
+
+				if (userInput === e1.number) {
+					e1.result.textContent = 'Congratulations! You it right!';
+					e1.result.style.background = 'green';
+					e1.lowOrHi.textContent = '';
+					e1.restGame();
+				} else if (e1.count === 10) {
+					e1.result.textContent = 'GAME OVER!!!';
+					e1.restGame();
+				} else {
+					e1.result.textContent = 'Wrong';
+					e1.result.style.background = 'red';
+					if (userInput < e1.number) {
+						e1.lowOrHi.textContent = 'Last guess was too low!';
+					} else {
+						e1.lowOrHi.textContent = 'Last guess was too high';
+					}
+				}
+
+				e1.count++;
+				e1.input.value = '';
+				e1.input.focus();
+			}
+		}
+
+		e1.button.addEventListener('click', e1.checkResult);
+	</script>
+</body>
+</html>
