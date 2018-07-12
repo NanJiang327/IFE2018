@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/IFE2016/MDN/2/images/pic1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IFE2016/MDN/2/images/pic2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IFE2016/MDN/2/images/pic3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IFE2016/MDN/2/images/pic4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IFE2016/MDN/2/images/pic5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IFE2016/MDN/2/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IFE2016/MDN/2/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/IFE2016/MDN/2/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,8 +31,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/IFE2016/MDN/2/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
+            <state relative-caret-position="461">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
             </state>
           </provider>
         </entry>
@@ -359,12 +353,12 @@
       <workItem from="1530282378881" duration="2016000" />
       <workItem from="1530752056551" duration="112000" />
       <workItem from="1530752172241" duration="695000" />
-      <workItem from="1530755107647" duration="78648000" />
+      <workItem from="1530755107647" duration="79254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="646011000" />
+    <option name="totallyTimeSpent" value="646617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -771,8 +765,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/IFE2016/MDN/2/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="80" column="57" selection-start-line="80" selection-start-column="57" selection-end-line="80" selection-end-column="57" />
+        <state relative-caret-position="461">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>

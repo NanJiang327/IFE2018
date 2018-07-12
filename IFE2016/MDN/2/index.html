@@ -77,11 +77,10 @@
 
 	document.querySelector('.dark').addEventListener('click',function () {
 		var overlay = document.querySelector('.overlay');
-		console.log(getComputedStyle(overlay, 'background-color'))
-		if (getComputedStyle(overlay, 'background-color') === 'rgba(0,0,0,0') {
-			overlay.style.backgroundColor = 'rgba(0,0,0.5)';
+		if (window.getComputedStyle(overlay,null).backgroundColor.indexOf('rgba(0, 0, 0, 0)') !== -1) {
+			overlay.style.backgroundColor = 'rgba(0,0,0,0.5)';
 		} else {
-			overlay.style.backgroundColor = 'rgba(0,0,0)';
+			overlay.style.backgroundColor = 'rgba(0,0,0,0)';
 		}
 	})
 
