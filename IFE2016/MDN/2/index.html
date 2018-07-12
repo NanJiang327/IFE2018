@@ -86,5 +86,38 @@
 
 
 </script>
+<script>
+	function Person(name, id, age){
+		this.name = name;
+		this.id = id;
+		this.age = age;
+	}
+
+	Person.prototype.say = function () {
+		alert('Hello I am '+this.name);
+	}
+
+	function Student(name, id, age, school) {
+		Person.call(this, name, id, age);
+
+		this.school = school;
+	}
+
+	function F() {}
+
+	F.prototype = Person.prototype;
+	Student.prototype = new F();
+	Student.prototype.constructor = Student;
+
+	Student.prototype.say1 = function () {
+		alert('I\'m studying at AUT');
+	}
+
+	function School(){
+	}
+
+
+	Student.prototype = Object.create(School.prototype);
+</script>
 </body>
 </html>
