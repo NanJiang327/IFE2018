@@ -103,7 +103,7 @@ User.prototype.setControl = function () {
 
 User.prototype.update = function(){
 	if ((this.x + 20) >= width) {
-		this.x = (width- 20)/2;
+		this.x = (width - 20)/2;
 	}
 
 	if ((this.x - 20) < 0) {
@@ -113,7 +113,7 @@ User.prototype.update = function(){
 }
 
 var user = new User(
-	width,
+	(width - 20) / 2,
 	height - 40,
 	10,
 	0
@@ -130,7 +130,7 @@ inherit(Bullet, Shape);
 Bullet.prototype.draw = function () {
 	ctx.beginPath();
 	ctx.fillStyle = '#fff';
-	ctx.fillRect(this.x, this.y, 5, 10);
+	ctx.fillRect(this.x + 7.5, this.y, 5, 10);
 	ctx.fill();
 }
 
@@ -147,8 +147,7 @@ Bullet.prototype.collisionDetect = function () {
 			var dx = this.x - balls[i].x;
 			var dy = this.y - balls[i].y;
 			var distance = Math.sqrt(dx * dx + dy * dy);
-
-			if (distance < this.size + balls[i].size) {
+			if (distance < 10 + balls[i].size) {
 				balls[i].exist = false;
 				this.exist = false;
 			}
@@ -190,7 +189,6 @@ function loop() {
 			bullets[j].collisionDetect();
 		} else {
 			bullets.splice(j, 1);
-			console.log('out');
 		}
 	}
 
