@@ -83,7 +83,7 @@ inherit(User, Shape);
 User.prototype.draw = function(){
 	ctx.beginPath();
 	ctx.fillStyle = 'royalblue';
-	ctx.fillRect(width - 40, height - 40, 20, 40);
+	ctx.fillRect(this.x, this.y, 20, 40);
 	ctx.fill();
 }
 
@@ -91,30 +91,30 @@ User.prototype.setControl = function () {
 	var _this = this;
 	window.onkeydown = function(e) {
 		if (e.keyCode === 65) {
-			console.log(_this.x);
 			_this.x -= _this.velX;
 		} else if (e.keyCode === 68) {
 			_this.x += _this.velX;
-		} else if (e.keyCode === 87) {
-			if (bullets.length <= 10) bullets.push(new Bullet(10, true));
+		} else if (e.keyCode === 32) {
+			if (bullets.length < 10) bullets.push(new Bullet(user.x, user.y, 0, 5, true));
+			console.log(bullets);
 		}
 	}
 }
 
 User.prototype.update = function(){
-	if ((this.x + this.size) >= width) {
-		this.x = (width- this.size)/2;
+	if ((this.x + 20) >= width) {
+		this.x = (width- 20)/2;
 	}
 
-	if ((this.x - this.size) < 0) {
-		this.x = (width- this.size)/2;
+	if ((this.x - 20) < 0) {
+		this.x = (width- 20)/2;
 	}
 
 }
 
 var user = new User(
-	width - 20,
-	height - 20,
+	width,
+	height - 40,
 	10,
 	0
 )
@@ -122,7 +122,7 @@ var user = new User(
 user.setControl();
 
 function Bullet(x, y, velX, velY, exist) {
-	Shape.call(this, x ,y, 0, velY, exist);
+	Shape.call(this, x ,y, velX, velY, exist);
 }
 
 inherit(Bullet, Shape);
@@ -134,8 +134,8 @@ Bullet.prototype.draw = function () {
 	ctx.fill();
 }
 
-Bullet.prototype.update = function () {
-	this.y += this.velY;
+Bullet.prototype.update1 = function () {
+	this.y -= this.velY;
 	if ((this.y - 10) <= 0) {
 		return this.exist = false;
 	}
@@ -144,8 +144,8 @@ Bullet.prototype.update = function () {
 Bullet.prototype.collisionDetect = function () {
 	for (var  i = 0; i < balls.length; i++){
 		if( balls[i].exist) {
-			var dx = this.x - balls[j].x;
-			var dy = this.y - balls[j].y;
+			var dx = this.x - balls[i].x;
+			var dy = this.y - balls[i].y;
 			var distance = Math.sqrt(dx * dx + dy * dy);
 
 			if (distance < this.size + balls[i].size) {
@@ -186,10 +186,11 @@ function loop() {
 	for (var j = 0; j < bullets.length; j++){
 		if (bullets[j].exist) {
 			bullets[j].draw();
-			bullets[j].update();
+			bullets[j].update1();
 			bullets[j].collisionDetect();
 		} else {
 			bullets.splice(j, 1);
+			console.log('out');
 		}
 	}
 
