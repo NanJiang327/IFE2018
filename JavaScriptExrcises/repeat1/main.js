@@ -1,9 +1,9 @@
-var balls = [], bullets = [], numberOfBalls, numberOfBullets;
+var balls = [], bullets = [], numberOfBalls, user, timer;
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
 
 var width = canvas.width = window.innerWidth;
-var height = canvas.height = window.innerHeight;
+var height = canvas.height = window.innerHeight - 100;
 
 // function to generate random number
 
@@ -112,15 +112,6 @@ User.prototype.update = function(){
 
 }
 
-var user = new User(
-	(width - 20) / 2,
-	height - 40,
-	10,
-	0
-)
-
-user.setControl();
-
 function Bullet(x, y, velX, velY, exist) {
 	Shape.call(this, x ,y, velX, velY, exist);
 }
@@ -163,50 +154,69 @@ function inherit(Child, Parent){
 }
 
 
-function loop() {
-	ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
-	// 用黑色覆盖之前的画布
-	ctx.fillRect(0, 0, width, height);
 
-	while (balls.length < 20) {
-		var ball = new Ball(
-			random(0,width),
-			random(0,height - 150),
-			random(-5,5),
-			random(-5,5),
-			'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
-			random(10,20),
-			true
-		);
-		numberOfBalls++;
-		balls.push(ball);
-	}
+document.querySelector('.newGame').addEventListener('click',function (e) {
+	e.target.disabled = true;
+	user = new User(
+		(width - 20) / 2,
+		height - 40,
+		10,
+		0
+	)
 
-	for (var j = 0; j < bullets.length; j++){
-		if (bullets[j].exist) {
-			bullets[j].draw();
-			bullets[j].update1();
-			bullets[j].collisionDetect();
-		} else {
-			bullets.splice(j, 1);
+	user.setControl();
+
+	function loop() {
+		ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
+		// 用黑色覆盖之前的画布
+		ctx.fillRect(0, 0, width, height);
+
+		while (balls.length < 20) {
+			var ball = new Ball(
+				random(0,width),
+				random(0,height - 150),
+				random(-5,5),
+				random(-5,5),
+				'rgb(' + random(0,255) + ',' + random(0,255) + ',' + random(0,255) +')',
+				random(10,20),
+				true
+			);
+			numberOfBalls++;
+			balls.push(ball);
 		}
-	}
 
-	for (var i = 0; i < balls.length; i++) {
-		if(balls[i].exist){
-			balls[i].draw();
-			balls[i].update();
-			balls[i].collisionDetect();
+		for (var j = 0; j < bullets.length; j++){
+			if (bullets[j].exist) {
+				bullets[j].draw();
+				bullets[j].update1();
+				bullets[j].collisionDetect();
+			} else {
+				bullets.splice(j, 1);
+			}
 		}
+
+		for (var i = 0; i < balls.length; i++) {
+			if(balls[i].exist){
+				balls[i].draw();
+				balls[i].update();
+				balls[i].collisionDetect();
+			}
+		}
+
+		timer = requestAnimationFrame(loop);
+
+		if (balls.length === 0) {
+			cancelAnimationFrame(timer);
+		}
+
+
+		user.draw();
+		user.update();
+
 	}
 
 
-	user.draw();
-	user.update();
-
-	requestAnimationFrame(loop);
-}
-
-window.onload = function () {
 	loop();
-}
+
+})
+
