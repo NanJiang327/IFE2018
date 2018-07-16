@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/avatar_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/walk-right.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/canvas.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/canvas.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,11 +31,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+            <state relative-caret-position="646">
+              <caret line="74" column="52" selection-end-line="77" selection-end-column="7" />
+              <folding>
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="canvas.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/canvas.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="523">
+              <caret line="95" column="43" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -82,7 +90,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/6/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/5/index.html" />
@@ -133,6 +140,7 @@
         <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index2.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index3.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index.html" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/canvas.html" />
       </list>
     </option>
   </component>
@@ -184,6 +192,23 @@
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
               <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day4" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
+              <item name="IFE2018" type="462c0819:PsiDirectoryNode" />
+              <item name="day4" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="IFE2018" type="b2602c69:ProjectViewProjectNode" />
@@ -327,11 +352,11 @@
       <recent name="$PROJECT_DIR$/IFE2016/task1.4.1" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1" />
       <recent name="$PROJECT_DIR$/JavaScriptExrcises/repeat1" />
       <recent name="$PROJECT_DIR$/IFE2016/MDN/2" />
       <recent name="$PROJECT_DIR$/IFE2016/任务二十五" />
       <recent name="$PROJECT_DIR$/JavaScriptExrcises/轮播图/5/img" />
-      <recent name="$PROJECT_DIR$/JavaScriptExrcises/轮播图/6/img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -383,12 +408,12 @@
       <workItem from="1530282378881" duration="2016000" />
       <workItem from="1530752056551" duration="112000" />
       <workItem from="1530752172241" duration="695000" />
-      <workItem from="1530755107647" duration="95181000" />
+      <workItem from="1530755107647" duration="98526000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="662544000" />
+    <option name="totallyTimeSpent" value="665889000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -444,13 +469,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2476">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="54" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/6/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
@@ -798,8 +816,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+        <state relative-caret-position="646">
+          <caret line="74" column="52" selection-end-line="77" selection-end-column="7" />
+          <folding>
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/canvas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="95" column="43" selection-start-line="95" selection-start-column="43" selection-end-line="95" selection-end-column="43" />
         </state>
       </provider>
     </entry>
