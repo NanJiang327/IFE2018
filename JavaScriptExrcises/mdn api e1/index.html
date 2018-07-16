@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Title</title>
+	<meta charset="utf-8">
+	<title>Shopping list example</title>
+	<style>
+		li {
+			margin-bottom: 10px;
+		}
+		li button {
+			font-size: 8px;
+			margin-left: 20px;
+			color: #666;
+		}
+	</style>
 </head>
 <body>
 
+<h1>My shopping list</h1>
+
+<div>
+	<label for="item">Enter a new item:</label>
+	<input type="text" name="item" id="item" class="input">
+	<button  class="addBtn">Add item</button>
+</div>
+
+<ul class="list">
+
+</ul>
+
+<script>
+	$ = function (name) {
+		return document.querySelector(name);
+	}
+
+	var list  = $('.list');
+	var btn = $('.addBtn');
+	var input = $('.input');
+
+	function createItem(name) {
+
+		var li = document.createElement('li');
+		var span = document.createElement('span');
+		var button = document.createElement('button');
+
+		span.textContent = name;
+		li.appendChild(span);
+
+		button.textContent = 'Delete';
+		li.appendChild(button);
+
+		list.appendChild(li);
+
+		button.addEventListener('click',function () {
+			list.removeChild(this.parentNode);
+			input.focus();
+		})
+	};
+
+
+
+	btn.addEventListener('click', function () {
+		createItem(input.value);
+		input.value = '';
+		input.focus();
+	})
+</script>
 </body>
 </html>
