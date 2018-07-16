@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd6bade7-448e-4f7b-8f5a-6c6b5b31de73" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,8 +38,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
-              <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+            <state relative-caret-position="526">
+              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -75,12 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/day 31 - 33/js/table.js" />
-        <option value="$PROJECT_DIR$/day 31 - 33/index.html" />
-        <option value="$PROJECT_DIR$/day 31 - 33/js/checkbox.js" />
-        <option value="$PROJECT_DIR$/day 31 - 33/js/app.js" />
-        <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/index.html" />
-        <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/4/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/轮播图/6/index.html" />
@@ -125,6 +126,12 @@
         <option value="$PROJECT_DIR$/JavaScriptExrcises/repeat1/index.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/1/main.js" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/repeat1/main.js" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/verse1.txt" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/verse2.txt" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/verse3.txt" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/verse4.txt" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index2.html" />
+        <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index3.html" />
         <option value="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index.html" />
       </list>
     </option>
@@ -313,11 +320,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetcing-data" />
       <recent name="$PROJECT_DIR$/JavaScriptExrcises/轮播图/1" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/day 34 - 36" />
       <recent name="$PROJECT_DIR$/IFE2016/task1.4.1" />
-      <recent name="$PROJECT_DIR$/IFE2016/task1" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/JavaScriptExrcises/repeat1" />
@@ -376,12 +383,12 @@
       <workItem from="1530282378881" duration="2016000" />
       <workItem from="1530752056551" duration="112000" />
       <workItem from="1530752172241" duration="695000" />
-      <workItem from="1530755107647" duration="92954000" />
+      <workItem from="1530755107647" duration="95181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="660317000" />
+    <option name="totallyTimeSpent" value="662544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -437,48 +444,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/day4/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="61" column="18" selection-start-line="61" selection-start-column="18" selection-end-line="61" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/day4/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6271">
-          <caret line="259" column="12" lean-forward="true" selection-start-line="259" selection-start-column="12" selection-end-line="259" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/3/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="197" column="20" selection-start-line="197" selection-start-column="20" selection-end-line="200" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/4/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="69" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/5/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="84" column="9" lean-forward="true" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="86" column="32" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/轮播图/2/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2476">
@@ -789,10 +754,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse3.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse2.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/fetching-data/verse1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JavaScriptExrcises/mdn api e1/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="699">
-          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        <state relative-caret-position="526">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
         </state>
       </provider>
     </entry>

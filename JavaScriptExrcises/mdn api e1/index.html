@@ -28,6 +28,10 @@
 
 </ul>
 
+<canvas width="320" height="240" class="myCanvas">
+	<p>Your browser doesn't support canvas. Boo hoo!</p>
+</canvas>
+
 <script>
 	$ = function (name) {
 		return document.querySelector(name);
@@ -64,6 +68,11 @@
 		input.value = '';
 		input.focus();
 	})
+</script>
+<script>
+	var canvas = document.querySelector('.myCanvas');
+	var width = canvas.width = window.innerWidth;
+	var height = canvas.height = window.innerHeight;
 </script>
 </body>
 </html>
