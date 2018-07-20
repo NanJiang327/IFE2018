@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Random quote machine</title>
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<style>
 
 		@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
@@ -16,7 +16,6 @@
 		}
 
 		body {
-			background-color: #333;
 			color: #333;
 			font-family: 'Raleway', sans-serif;
 			font-weight:400;
@@ -34,7 +33,6 @@
 			padding-top: 200px;
 			width: 100vw;
 			height: 100vh;
-			background-color: #000;
 		}
 
 		.showcase {
@@ -44,22 +42,22 @@
 			min-height: 250px;
 			border-radius: 3px;
 			background-color: #fff;
-			color: #fff;
-
 		}
 
 		.showcase a{
 			display: inline-block;
 			padding: 10px;
-			height: 50px;
+			height: 30px;
+			min-width: 30px;
 			font-size: 19px;
-			border-radius: 20px;
-			line-height: 50px;
+			border-radius: 10px;
+			line-height: 30px;
 			text-align: center;
 			text-decoration: none;
 		}
 
 		.quote {
+			min-height: 120px;
 			font-size: 30px;
 		}
 
@@ -98,61 +96,72 @@
 	<div class="container">
 		<div class="showcase">
 			<div class="word">
-				<p class="quote"><i class="fa fa-quote-left"> </i><span id="text"> Lorem ipsum dolor sndi eum excepturi explicabo, illo iusto maxime minus natus, perspiciatis qui quis reiciendis sed sequi voluptate!</span></p>
-				<p class="author">- J. Paul Getty</p>
+				<p class="quote"><i class="fa fa-quote-left"> </i><span id="text"></span></p>
+				<p class="author"></p>
 			</div>
 			<div class="btn">
-				<a href="" class="button" target="_blank" id="post-twitter"><i class="fa fa-twitter"></i></a>
-				<a href="" class="button" target="_blank" id="post-tumblr"><i class="fa fa-tumblr"></i></a>
-				<a href="" class="button" target="_blank" id="new-quote">New Quote</a>
+				<a href="#" class="button"  target="_blank" id="post-twitter"><i class="fa fa-twitter"></i></a>
+				<a href="#" class="button" target="_blank" id="post-tumblr"><i class="fa fa-tumblr"></i></a>
+				<a href="#" class="button"  id="new-quote">New Quote</a>
 			</div>
 		</div>
 		<footer>
 			<p class="me">by <a href="https://github.com/NanJiang327">Nan</a></p>
 		</footer>
 	</div>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 	<script>
-		var colors = ['#16a085', '#27ae60', '#2c3e50', '#f39c12', '#e74c3c', '#9b59b6', '#FB6964', '#342224', "#472E32", "#BDBB99", "#77B1A9", "#73A857"], currentAuthor = '', currentQuote = '';
+		var colors = [
+    "#16a085",
+    "#27ae60",
+    "#2c3e50",
+    "#f39c12",
+    "#e74c3c",
+    "#9b59b6",
+    "#FB6964",
+    "#342224",
+    "#472E32",
+    "#BDBB99",
+    "#77B1A9",
+    "#73A857"
+  ],
+  currentAuthor = "",
+  currentQuote = "";
 
-		function getQuote(){
-			$.ajax({
-				header: {
-					"X-Mashape-Key" : "OivH71yd3tmshl9YKzFH7BTzBVRQp1RaKLajsnafgL2aPsfP9V",
-					Accept: "application/json",
-					"Content-Type": "application/x-www-form-urlencoded"
-				},
-				url: 'https://andruxnet-random-famous-quotes.p.mashape.com/cat=',
-				success: function(r) {
-					if (typeof r === 'string') {
-						r = JSON.parse(r);
-					}
-					if (Array.isArray(r)) {
-						r = r[0];
-					}
-					currentQuote = r.quote;
-					currentAuthor = r.author;
-						$('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
-						$('#tumblr-quote').attr('href', 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='+encodeURIComponent(currentAuthor)+'&content=' + encodeURIComponent(currentQuote)+'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
+var data = {
+    "quote":[{
+        "author": "Nan", 
+        "quotes":["lorem dasdkn ", "失败是成功之母", "没有付出就有收获"]
+    }]
+};
 
-					$(".quote-text").animate({
+function getQuote() {
+	console.log(data);
+					currentQuote = data['quote'][0].quotes[Math.floor(Math.random() * 3)];
+					currentAuthor = data['quote'][0].author;
+						$('#post-twitter').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
+						$('#post-tumblr').attr('href', 'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption='+encodeURIComponent(currentAuthor)+'&content=' + encodeURIComponent(currentQuote)+'&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button');
+
+					$(".quote").animate({
 							opacity: 0
 						}, 500,
 						function() {
 							$(this).animate({
 								opacity: 1
 							}, 500);
-							$('#text').text(r.quote);
+							$('#text').text(currentQuote);
 						});
 
-					$(".quote-author").animate({
+					$(".author").animate({
 							opacity: 0
 						}, 500,
 						function() {
 							$(this).animate({
 								opacity: 1
 							}, 500);
-							$('#author').html(r.author);
+							$('.author').html("- "+currentAuthor);
 						});
 
 					var color = Math.floor(Math.random() * colors.length);
@@ -160,11 +169,10 @@
 						backgroundColor: colors[color],
 						color: colors[color]
 					}, 1000);
-					$(".button").animate({
+					$(".showcase a").animate({
 						backgroundColor: colors[color]
 					}, 1000);
-				}
-			});
+				
 		}
 
 		$(document).ready(function() {
@@ -180,6 +188,7 @@
 
 			});
 		});
+
 	</script>
 </body>
 </html>
