@@ -101,7 +101,10 @@
     Finish free code camp advanced algorithm
     
 * #### 2018.07.24
-    Finish free code camp advanced algorithm    
+    Finish free code camp advanced algorithm
+    
+* #### 2018.07.26
+    learning js  
 ---
 
 ### 设计学院
