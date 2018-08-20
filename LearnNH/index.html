@@ -2,11 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scale=no">
     <title>Title</title>
-    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-s
+
+<form id="test-form" action="test">
+    <legend>请选择想要学习的编程语言：</legend>
+    <fieldset>
+        <p><label class="selectAll"><input type="checkbox"> <span class="selectAll">全选</span><span class="deselectAll">全不选</span></label> <a href="#0" class="invertSelect">反选</a></p>
+        <p><label><input type="checkbox" name="lang" value="javascript"> JavaScript</label></p>
+        <p><label><input type="checkbox" name="lang" value="python"> Python</label></p>
+        <p><label><input type="checkbox" name="lang" value="ruby"> Ruby</label></p>
+        <p><label><input type="checkbox" name="lang" value="haskell"> Haskell</label></p>
+        <p><label><input type="checkbox" name="lang" value="scheme"> Scheme</label></p>
+        <p><button type="submit">Submit</button></p>
+    </fieldset>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    var
+        form = $('#test-form'),
+        langs = form.find('[name=lang]'),
+        selectAll = form.find('label.selectAll :checkbox'),
+        selectAllLabel = form.find('label.selectAll span.selectAll'),
+        deselectAllLabel = form.find('label.selectAll span.deselectAll'),
+        invertSelect = form.find('a.invertSelect');
+
+    // 重置初始化状态:
+    form.find('*').show().off();
+    form.find(':checkbox').prop('checked', false).off();
+    deselectAllLabel.hide();
+    // 拦截form提交事件:
+    form.off().submit(function (e) {
+        e.preventDefault();
+        alert(form.serialize());
+    });
+
+    // TODO:绑定事件
+    selectAll.click(function(){
+        var checked = $(this).prop("checked");
+        if(checked){
+            langs.each(function(){
+                $(this).prop("checked",true);
+                selectAllLabel.hide();
+                deselectAllLabel.show();
+            });
+        } else {
+            langs.each(function(){
+                $(this).prop("checked",false);
+                selectAllLabel.show();
+                deselectAllLabel.hide();
+            });
+        }
+    })
+
+    langs.change(function(){
+        var checked = $(this).prop("checked");
+        var allChecked = selectAll.prop("checked");
+
+        if(checked){
+            var flag = true;
+            for(let i=0;i<langs.length;i++){
+                if(!langs.get(i).checked){flag = false;break;}
+            }
+            if(flag){
+                selectAll.prop("checked",true);
+                selectAllLabel.hide();
+                deselectAllLabel.show();
+            }
+        } else {
+            if(allChecked){
+                selectAll.prop("checked",false);
+                selectAllLabel.show();
+                deselectAllLabel.hide();
+            }
+        }
+    });
+
+
+    invertSelect.click(function(){
+        var langsCheck = form.find('[name=lang]:checked');
+        var uncheck = langs.filter(function(){
+            return !$(this).prop('checked');
+        });
+
+        langsCheck.each(function(){
+            $(this).prop("checked",false);
+        });
+
+        uncheck.each(function(){
+            $(this).prop('checked',true);
+        });
+
+        console.log(langsCheck.length);
+
+        if(langsCheck.length === 0){
+            selectAll.prop("checked",true);
+            selectAllLabel.hide();
+            deselectAllLabel.show();
+        } else {
+            selectAll.prop("checked",false);
+            selectAllLabel.show();
+            deselectAllLabel.hide();
+        }
+    })
+</script>
+
 </body>
 </html>
