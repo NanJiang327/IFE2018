@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Semantic UI</title>
+  <link rel="stylesheet" href="semantic/dist/semantic.css">
+  <style>
+    body {
+      margin-bottom: 33000px;
+      padding-bottom: 33000px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ui.button {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Message -->
+  <h1 class="ui dividing header">Message</h1>
+  <div>
+      <div class="ui message">
+          <div class="header">课程</div>
+          <p>Semantic</p>
+      </div>
+
+      <div class="ui large message">
+          <div class="header">课程</div>
+          <p>Semantic</p>
+      </div>
+
+      <div class="ui compact message">
+          <div class="header">课程</div>
+          <p>Semantic</p>
+      </div>
+
+      <div class="ui info icon message">
+          <i class="info icon"></i>
+          <div class="content">
+            <div class="headr">课程</div>
+            <p>Semantic</p>
+          </div>
+      </div>
+
+      <div class="ui info icon message">
+          <i class="close icon"></i>
+          <i class="info icon"></i>
+          <div class="content">
+            <div class="headr">课程</div>
+            <p>Semantic</p>
+          </div>
+      </div>
+        
+  </div>
+
+  <!-- Table -->
+  <h1 class="ui dividing header">Table</h1>
+  <div>
+    <table class="ui red two column celled striped selectable table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="disabled">
+          <td class="active">Nan</td>
+          <td>2018.09.13</td>
+        </tr>
+        <tr>
+            <td class="positive">cc</td>
+            <td>2018.09.14</td>
+        </tr>
+        <tr>
+            <td>cc2</td>
+            <td class="negative">2018.09.14</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Form -->
+  <h1 class="ui dividing header">Form</h1>
+  <form action="" class="ui form success">
+    
+    <div class="ui error message">
+      <div class="headr">Sorry</div>
+      <p>My fault</p>
+    </div>
+    
+    <div class="ui success message">
+        <div class="headr">HI</div>
+        <p>Hello World</p>
+    </div>
+    <div class="fields three">
+        <div class="required field">
+            <label for="">姓名</label>
+            <input type="text">
+        </div>
+        <div class="field">
+            <label for="">电话</label>
+            <input type="text" value="12345" readonly>
+        </div>
+        <div class="field disabled">
+            <label for="">Email</label>
+            <input type="text">
+        </div>
+        <div class="field error">
+            <label for="">Gender</label>
+            <input type="text">
+        </div>        
+    </div>
+
+    <div class="field">
+        <label for="">Country</label>
+        <select name="" id="" class="ui dropdown" multiple>
+          <option value="">选择国家</option>
+          <option value="CN">China</option>
+          <option value="JP">Japan</option>
+          <option value="US">USA</option>
+        </select>
+      </div>
+  
+    <div class="fields inline">
+        <label for="">Payement:</label>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="payment" id="">
+            <label for="">支付宝</label>
+          </div>
+        </div>  
+        <div class="field">
+            <div class="ui radio checkbox">
+              <input type="radio" name="payment" id="">
+              <label for="">Paypal</label>
+            </div>
+          </div> 
+    </div>
+
+    <div class="field">
+      <div class="ui checkbox">
+        <input type="checkbox" name="" id="">
+        <label for="">短信</label>
+      </div>
+
+      <div class="ui toggle checkbox">
+          <input type="checkbox" name="" id="">
+          <label for="">电话</label>
+      </div>
+
+      <div class="ui slider checkbox">
+          <input type="checkbox" name="" id="">
+          <label for="">Email</label>
+      </div>
+    </div>
+
+    <button type="submit" class="ui button">Submit</button>
+  </form>
+
+  <div class="ui divider"></div>
+
+  <div class="ui secondary bottom fixed stackable menu">
+    <div class="header item">
+      Nan.com
+    </div>
+    <a href="" class="active item">Blog</a>
+    <a href="" class="item">Course</a>
+    <a href="" class="item">Community</a>
+    <div class="item">
+      <div class="ui icon input">
+        <input placeholder="search"></input>
+        <i class="search icon"></i>
+      </div>
+    </div>
+    <div class="right item">
+      <button class="ui primary button">注册</button>
+    </div>
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="semantic/dist/semantic.js"></script>
+  <script>
+    $('.close.icon').click(function () { 
+        $(this).closest('.message').transition('fade');
+     });
+
+    $('select.dropdown').dropdown(); 
+
+    $('.ui.radio.checkbox').checkbox();
+
+    $('.ui.checkbox').checkbox();
+  </script>
+</body>
+</html>

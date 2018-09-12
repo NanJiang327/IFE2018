@@ -45,6 +45,7 @@ lib-cov
 *.out
 *.pid
 *.gz
+*-lock.json
 pids
 logs
 #results

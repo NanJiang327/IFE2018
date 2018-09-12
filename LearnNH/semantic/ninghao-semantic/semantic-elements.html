@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Semantic UI</title>
+  <link rel="stylesheet" href="semantic/dist/semantic.css">
+  <style>
+    body {
+      margin-bottom: 33000px;
+      padding-bottom: 33000px;
+    }
+    .ui.button {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 按钮样式 -->
+  <div>
+    <!-- 尺寸 -->
+    <div>
+        <h1 class="ui">按钮样式</h1>
+        <h2>尺寸</h2>
+        <button class="ui button mini">按钮</button>
+        <button class="ui button tiny">按钮</button>
+        <button class="ui button small">按钮</button>
+        <button class="ui button medium">按钮</button>
+        <button class="ui button large">按钮</button>
+        <button class="ui button massive">按钮</button>
+        <button class="ui button fluid">按钮</button>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- 动画 -->
+    <div>
+        <h2>动画</h2>
+        <button class="ui animated button">
+            <div class="visible content">下一步</div> 
+            <div class="hidden content">
+                <i class="right arrow icon"></i>
+            </div>  
+        </button>
+    
+    
+        <button class="ui vertical animated button">
+            <div class="visible content">下一步</div> 
+            <div class="hidden content">
+                <i class="right arrow icon"></i>
+            </div> 
+        </button>
+    
+        <button class="ui fade animated button">
+            <div class="visible content">下一步</div> 
+            <div class="hidden content">
+                <i class="right arrow icon"></i>
+            </div>   
+        </button>
+    </div>
+
+    <div class="ui divider"></div>
+
+    <!-- 标签按钮 -->
+    <div>
+        <h2>标签按钮</h2>
+        <button class="ui icon button"><i class="cloud icon"></i></button>
+    
+        <button class="ui circular icon button"><i class="cloud icon"></i></button>
+    
+        <button class="ui labeled icon button"><i class="pause icon"></i>暂停</button>
+        
+        <button class="ui right labeled icon button"><i class="right arrow icon"></i>下一个</button>
+        
+    </div>
+
+    <div class="ui divider"></div>
+
+    <!-- 按钮颜色 -->
+    <div>
+      <h2>颜色按钮</h2>
+
+      <button class="ui basic button">关注</button>
+
+      <button class="ui red basic button">关注</button>
+      
+      <button class="ui button green">关注</button>
+
+      <div class="ui inverted segment">
+        <button class="ui inverted basic button red ">关注</button>
+        
+        <button class="ui inverted button blue">关注</button>
+
+        <button class="ui button green">关注</button>
+      </div>
+    </div>
+
+    <div class="ui divider"></div>
+    <!-- 群组按钮 -->
+    <div>
+        <h2>群组按钮</h2>
+        <div class="ui buttons">
+          <button class="ui button">HTML</button>
+          <button class="ui button">CSS</button>
+          <button class="ui button">JavaScript</button>
+        </div>
+
+        <div class="ui divider"></div>
+
+        <div class="ui basic buttons">
+            <button class="ui button">HTML</button>
+            <button class="ui button">CSS</button>
+            <button class="ui button">JavaScript</button>
+        </div>
+
+        <div class="ui divider"></div>
+
+        <div class="ui basic three buttons">
+            <button class="ui button">HTML</button>
+            <button class="ui button">CSS</button>
+            <button class="ui button">JavaScript</button>
+        </div>
+
+        <div class="ui divider"></div>
+
+        <div class="ui green small vertical buttons">
+            <button class="ui button">HTML</button>
+            <button class="ui button">CSS</button>
+            <button class="ui button">JavaScript</button>
+        </div>
+
+        <div class="ui divider"></div>
+
+        <div class="ui vertical labeled icon buttons">
+          <button class="ui button"><i class="icon play"></i>播放</button>
+          <button class="ui button"><i class="icon pause"></i>暂停</button>
+          <button class="ui button"><i class="icon shuffle"></i>随机</button>
+        </div>
+
+    </div>
+
+    <div class="ui divider"></div>
+
+    <!-- 按钮状态 -->
+    <div>
+      <button class="ui button active">关注</button>
+      <button class="ui button disabled">关注</button>
+      <button class="ui button loading">关注</button>
+    </div>
+  </div>
+  
+  <!-- 文本框样式 -->
+  <h2 class="ui dividing header">input</h2>
+
+  <div>
+      <div class="ui input">
+          <input type="text" placeholder="search">
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui input fluid">
+            <input type="text" placeholder="search">
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui transparent input">
+            <input type="text" placeholder="search">
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui inverted segment">
+            <div class="ui inverted large input">
+                <input type="text" placeholder="search">
+              </div>
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui icon input">
+            <input type="text" placeholder="search">
+            <i class="search icon"></i>
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui left icon input">
+            <input type="text" placeholder="search">
+            <i class="search circular link icon"></i>
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui labeled input">
+          <div class="ui label">https://</div>
+          <input type="text" placeholder="mysite.com">
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui right labeled input">
+          <input type="text" placeholder="输入标签">
+          <div class="ui tag label">添加标签</div>
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui big corner labeled input">
+          <input type="text" placeholder="输入标签">
+          <div class="ui corner label">
+            <i class="asterisk icon"></i>
+          </div>
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui action input">
+            <input type="text" placeholder="search">
+            <button class="ui button">search</button>
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui focus action input">
+            <input type="text" placeholder="search">
+            <button class="ui button">search</button>
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui icon input loading">
+            <input type="text" placeholder="search">
+            <i class="search icon"></i>
+        </div>
+
+        <div class="ui divider"></div>
+      
+        <div class="ui icon input error">
+            <input type="text" placeholder="search">
+            <i class="search icon"></i>
+        </div>
+  </div>
+
+  <!-- 步骤 -->
+  
+  <h2 class="ui dividing header">Step</h2>
+
+  <div>
+    <div class="ui fluid steps">
+        <div class="step active">
+            <i class="payment icon"></i>
+            <div class="content">
+                <div class="title">支付</div>
+                <div class="description">选择付款方式</div>
+            </div>
+        </div>
+        <div class="disabled step">
+          <i class="truck icon"></i>
+          <div class="content">
+              <div class="title">配送</div>
+              <div class="description">选择配送方式</div>
+          </div>
+        </div>
+        <div class="disabled step">
+            <i class="info icon"></i>
+            <div class="content">
+                <div class="title">确认</div>
+                <div class="description">确认订单信息</div>
+            </div>
+          </div>
+    </div>
+
+    <div class="ui ordered fluid steps">
+        <div class="step completed">
+            <div class="content">
+                <div class="title">支付</div>
+                <div class="description">选择付款方式</div>
+            </div>
+        </div>
+        <div class="active step">
+          <div class="content">
+              <div class="title">配送</div>
+              <div class="description">选择配送方式</div>
+          </div>
+        </div>
+        <div class="disabled step">
+            <div class="content">
+                <div class="title">确认</div>
+                <div class="description">确认订单信息</div>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <!-- reveal -->
+  
+  <h1 class="ui dividing header">Reveal</h1>
+
+  <div>
+      <div class="ui fade reveal">
+          <div class="visible content">
+            <img src="images/wireframe/image-square.png" alt="" class="ui small image">
+          </div>
+          <div class="hidden content">
+            <img src="images/avatar/black-widow.jpg" alt="" class="ui small image">
+          </div>
+        </div>
+      
+        <div class="ui divider"></div>
+      
+        <div class="ui rotate right reveal">
+            <div class="visible content">
+              <img src="images/wireframe/image-square.png" alt="" class="ui small image">
+            </div>
+            <div class="hidden content">
+              <img src="images/avatar/black-widow.jpg" alt="" class="ui small image">
+            </div>
+        </div>
+  </div>
+
+  
+  <h1 class="ui dividing header">Loader</h1>
+
+  <div class="ui segment">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem perspiciatis ea amet enim ipsum praesentium veritatis in, nisi aliquid iusto sequi sed veniam assumenda impedit, repellat et. Distinctio, quisquam!</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus autem perspiciatis ea amet enim ipsum praesentium veritatis in, nisi aliquid iusto sequi sed veniam assumenda impedit, repellat et. Distinctio, quisquam!</p>
+  
+    <div class="ui active dimmer inverted">
+      <div class="ui text loader">加载中</div>
+    </div>
+  </div>
+  
+
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="semantic/dist/semantic.js"></script>
+</body>
+</html>
