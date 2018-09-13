@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Semantic UI</title>
+  <link rel="stylesheet" href="semantic/dist/semantic.css">
+  <style>
+    body {
+      margin-bottom: 33000px;
+      padding-bottom: 33000px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ui.button {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 使用column -->
+  <!-- <div class="ui two column grid"> -->
+  <div class="ui four column doubling stackable grid">
+    <!-- 仅手机看见 -->
+    <div class="mobile only row">
+        <div class="column">
+            <div class="ui red statistic">
+                <div class="value">
+                    1
+                  </div>
+                  <div class="label">
+                    COLUMN
+                  </div>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur a
+              dipisicing elit. Maxime quis ex reprehenderit similique exer
+              citationem? Officiis modi molestiae aut harum, praesentium mo
+              lestias deserunt solutaarchitecto fugiat hic
+               accusamus asperiores ex reiciendis.</p>
+        </div>
+        <div class="column">
+              <div class="ui orange statistic">
+                  <div class="value">
+                     2
+                    </div>
+                    <div class="label">
+                      COLUMN
+                    </div>
+              </div>
+              <p>Lorem ipsum, dolor sit amet consectetur a
+                dipisicing elit. Maxime quis ex reprehenderit similique exer
+                citationem? Officiis modi molestiae aut harum, praesentium mo
+                lestias deserunt solutaarchitecto fugiat hic
+                 accusamus asperiores ex reiciendis.</p>
+        </div>
+    </div>
+    <!-- 仅电脑可见 -->
+    <div class="computer only column">
+          <div class="ui green statistic">
+              <div class="value">
+                  3
+                </div>
+                <div class="label">
+                  COLUMN
+                </div>
+          </div>
+          <p>Lorem ipsum, dolor sit amet consectetur a
+            dipisicing elit. Maxime quis ex reprehenderit similique exer
+            citationem? Officiis modi molestiae aut harum, praesentium mo
+            lestias deserunt solutaarchitecto fugiat hic
+             accusamus asperiores ex reiciendis.</p>
+    </div>
+
+    <div class="sixteen wide mobile four wide tablet eight wide computer column">
+            <div class="ui blue statistic">
+                <div class="value">
+                    4
+                  </div>
+                  <div class="label">
+                    COLUMN
+                  </div>
+            </div>
+            <p>Lorem ipsum, dolor sit amet consectetur a
+              dipisicing elit. Maxime quis ex reprehenderit similique exer
+              citationem? Officiis modi molestiae aut harum, praesentium mo
+              lestias deserunt solutaarchitecto fugiat hic
+               accusamus asperiores ex reiciendis.</p>
+    </div>
+    <div class="column">
+              <div class="ui olive statistic">
+                  <div class="value">
+                      5
+                    </div>
+                    <div class="label">
+                      COLUMN
+                    </div>
+              </div>
+              <p>Lorem ipsum, dolor sit amet consectetur a
+                dipisicing elit. Maxime quis ex reprehenderit similique exer
+                citationem? Officiis modi molestiae aut harum, praesentium mo
+                lestias deserunt solutaarchitecto fugiat hic
+                 accusamus asperiores ex reiciendis.</p>
+    </div>
+    <div class="column">
+                <div class="ui yellow statistic">
+                    <div class="value">
+                        6
+                      </div>
+                      <div class="label">
+                        COLUMN
+                      </div>
+                </div>
+                <p>Lorem ipsum, dolor sit amet consectetur a
+                  dipisicing elit. Maxime quis ex reprehenderit similique exer
+                  citationem? Officiis modi molestiae aut harum, praesentium mo
+                  lestias deserunt solutaarchitecto fugiat hic
+                   accusamus asperiores ex reiciendis.</p>
+    </div>
+    <div class="column">
+                  <div class="ui red statistic">
+                      <div class="value">
+                          7
+                        </div>
+                        <div class="label">
+                          COLUMN
+                        </div>
+                  </div>
+                  <p>Lorem ipsum, dolor sit amet consectetur a
+                    dipisicing elit. Maxime quis ex reprehenderit similique exer
+                    citationem? Officiis modi molestiae aut harum, praesentium mo
+                    lestias deserunt solutaarchitecto fugiat hic
+                     accusamus asperiores ex reiciendis.</p>
+    </div>
+  </div>
+
+
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="semantic/dist/semantic.js"></script>
+  <script>
+    $('.close.icon').click(function () { 
+        $(this).closest('.message').transition('fade');
+     });
+
+    $('select.dropdown').dropdown(); 
+
+    $('.ui.radio.checkbox').checkbox();
+
+    $('.ui.checkbox').checkbox();
+  </script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+  <meta charset="UTF-8">
+  <title>Semantic UI</title>
+  <link rel="stylesheet" href="semantic/dist/semantic.css">
+  <style>
+    body {
+      margin-bottom: 33000px;
+      padding-bottom: 33000px;
+    }
+    .ui.button {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="ui left thin sidebar inverted vertical menu">
+    <div class="item">
+      <h4 class="ui blue header">Nan</h4>
+    </div>
+    <div class="item">
+      <div class="ui inverted transparent icon input">
+        <i class="search icon"></i>
+        <input type="text" placeholder="Search">
+      </div>
+    </div>
+    <div class="item">
+      <div class="header">Coures</div>
+      <div class="menu">
+        <a href="" class="item">html</a>
+        <a href="" class="item">css</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui pusher container">
+      <!-- Accordion -->
+      <h2>Accordion</h2>
+      <div class="ui seciton divider"></div>
+
+      <div class="ui styled fluid accordion">
+        <div class="title">
+          <i class="dropdown icon"></i>
+          绿巨人
+        </div>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et earum nostrum cumque sit nulla exercitationem, praesentium deleniti vero nam ea sed tenetur! Reprehenderit, assumenda possimus sapiente quidem ipsa mollitia ducimus.</p>
+        </div>
+        <div class="active title">
+          <i class="dropdown icon"></i>
+          钢铁侠
+        </div>
+        <div class="active content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et earum nostrum cumque sit nulla exercitationem, praesentium deleniti vero nam ea sed tenetur! Reprehenderit, assumenda possimus sapiente quidem ipsa mollitia ducimus.</p>
+        </div>
+        <div class="title">
+          <i class="dropdown icon"></i>
+          黑寡妇
+        </div>
+        <div class="content">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et earum nostrum cumque sit nulla exercitationem, praesentium deleniti vero nam ea sed tenetur! Reprehenderit, assumenda possimus sapiente quidem ipsa mollitia ducimus.</p>
+        </div>
+          
+      </div>
+
+      <!-- Dimmer -->
+      <h2>Dimmer</h2>
+      <div class="ui seciton divider"></div>
+
+      <div class="ui piled segment">
+        <h2 class="ui header">On my way</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure amet repellendus ipsam tempora ullam ducimus cumque, optio adipisci aliquam veritatis accusamus reprehenderit, deserunt totam quidem quos. Voluptates, voluptatum optio? Nostrum.</p>
+        <div class="ui hidden divider"></div>
+        <div class="ui threaded comments">
+          <div class="comment">
+            <a href="" class="avatar">
+              <img src="images/avatar/iron-man.jpg" alt="">
+            </a>
+            <div class="content">
+              <a href="" class="author">Iron Man</a>
+              <div class="metadata">
+                1 min before
+              </div>
+              <div class="text">
+                好喜欢你啊
+              </div>
+              <div class="actions">
+                <a href="">回复</a>
+              </div>
+            </div>
+            <div class="comments">
+                <div class="comment">
+                    <a href="" class="avatar">
+                      <img src="images/avatar/captain-marvel.jpg" alt="">
+                    </a>
+                    <div class="content">
+                      <a href="" class="author">Iron Man</a>
+                      <div class="metadata">
+                        1 min before
+                      </div>
+                      <div class="text">
+                        好喜欢你啊
+                      </div>
+                      <div class="actions">
+                        <a href="">回复</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <form action="" class="ui reply form">
+            <div class="field">
+              <textarea name="" id="" cols="30" rows="5"></textarea>
+            </div>
+            <button class="ui primary submit labeled icon button">
+              <i class="edit icon"></i>
+              评论
+            </button>
+          </form>
+        </div>
+        <div class="ui dimmer">
+          <div class="content">
+            <h2 class="ui red inverted icon header">
+              <i class="red heart icon"></i>
+              Like
+            </h2>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <h2>Modal</h2>
+      <div class="ui seciton divider"></div>
+
+      <div class="ui first modal">
+        <h2 class="header">
+          Delete
+        </h2>
+        <div class="content">
+          删除文章, 确定吗
+        </div>
+        <div class="actions">
+          <button class="negative ui button">否</button>
+          <button class="ui positive button">是</button>
+        </div>
+      </div>
+
+      <div class="ui second modal">
+        <h2 class="header">
+          Deleting
+        </h2>
+        <div class="content">
+          <div class="ui progress active">
+            <div class="bar" style="width: 30%"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating -->
+      <h2>Rating</h2>
+      <div class="ui seciton divider"></div>
+
+      <div>
+          <div class="ui rating" data-max-rating="5" data-rating="3">
+        
+            </div> 
+            <div class="ui divider"></div>
+            <div class="ui rating heart huge" data-max-rating="5" data-rating="3">
+              
+            </div> 
+            <div class="ui divider"></div>
+            <div class="ui rating star" data-max-rating="5" data-rating="3">
+              
+            </div> 
+            <div class="ui divider"></div>
+      </div>
+
+      <!-- Dropdown -->
+      <h2>Dropdown</h2>
+      <div class="ui seciton divider"></div>
+      <!-- <div class="ui search selection dropdown"></div> -->
+      <div class="ui pointing dropdown labeled icon button">
+        <i class="angle down icon"></i>
+        <span class="text">Course</span>
+        <div class="menu">
+          <div class="ui icon search input">
+            <i class="saerch icon"></i>
+            <input type="text" placeholder="Search">
+          </div>
+          <div class="item" data-value="HTML">HTML</div>
+          <div class="item" data-value="CSS">CSS</div>
+          <div class="item" data-value="JavaScript">JavaScript</div>
+        </div>
+      </div>
+
+
+      <!-- Progress -->
+      <h2>Progress</h2>
+      <div class="ui seciton divider"></div>
+      <div class="ui progress" id="upload">
+        <div class="bar">
+          <div class="progress">30%</div>
+        </div>
+        <div class="label">
+          上传文件
+        </div>
+      </div>
+
+      <!-- PopUp -->
+      <h2>Pop Up</h2>
+      <div class="ui seciton divider"></div>
+      <img src="images/avatar/hulk.jpg" alt="" 
+      class="ui small centered rounded image" 
+      data-title="Hulk" data-content="生气就绿">
+
+      <!-- Sidebar -->
+      <h2>Side Bar</h2>
+      <div class="ui seciton divider"></div>
+      <div class="ui labeled icon button" id="sidebar">
+        <i class="sidebar icon"></i>
+        Menu
+      </div>
+
+      <!-- Tab -->
+      <h2>Tab</h2>
+      <div class="ui seciton divider"></div>
+
+      <div class="ui top attached tabular menu">
+        <a href="" class="item" data-tab="html">HTML</a>
+        <a href="" class="item active" data-tab="css">CSS</a>
+        <a href="" class="item" data-tab="js">JS</a>
+      </div>
+      <div class="ui bottom attached tab segment" data-tab="html">HTML</div>
+      <div class="ui bottom active attached tab segment" data-tab="css">CSS</div>
+      <div class="ui bottom attached tab segment" data-tab="js">JS</div>
+
+  </div>
+
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="semantic/dist/semantic.js"></script>
+  <script>
+    $('.ui.accordion').accordion({
+      exclusive: false,
+      on: 'click',
+      duration: 1000,
+
+    });
+
+    $('.ui.segment').dimmer({
+      on:'click',
+      transition: 'drop'
+    })
+
+    // $('.ui.first.modal').modal({
+    //   blurring:true,
+    //   inverted: true,
+    //   onShow: function(){
+    //     console.log('正在显示')
+    //   },
+    //   onVisible: function(){
+    //     console.log('完全显示')
+    //   },
+    //   onHide: function(){
+    //     console.log('正在隐藏')
+    //   },
+    //   onHidden: function(){
+    //     console.log('隐藏了')
+    //   },
+    //   onApprove: function(){
+    //     console.log('点击了确认')
+    //   },
+    //   onDeny: function(){
+    //     console.log('点击了拒绝')
+    //   }
+    //   }).modal('show')
+
+    // $('.ui.second.modal').modal('attach events','.first.modal .positive.button','show')
+  
+    // rating
+
+    $('.ui.rating').rating();
+
+    $('.ui.rating').rating('get rating')
+
+    $('.ui.rating').rating('disable')
+
+    // dropdown
+    $('.ui.dropdown').dropdown({
+      on: 'hover',
+      allowAddtions: true
+    });
+
+    // progress
+    $('#upload').progress({
+      value: 30,
+      total: 100,
+      text: {
+        active: '{total} 张照片, 已经上传{value}张',
+        success: '成功上传了{total}张照片'
+      }
+    });
+
+    // 设置pop up
+    $('.ui.image').popup();
+
+    // sidebar
+    $('#sidebar').click(function (){
+      $('.ui.sidebar')
+      .sidebar({
+        transition:'overlay'
+      })
+      .sidebar('show');
+    })
+
+    $('.menu .item').tab();
+  </script>
+</body>
+</html>
