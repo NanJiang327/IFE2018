@@ -32,9 +32,9 @@ gulp serve
 ## Look
 
 ### Big devices
-![Image text](https://raw.github.com/NanJiang327/IFE2018/master/img/big_device.png)
+![Image text](https://github.com/NanJiang327/IFE2018/blob/master/imgs/big_device.png?raw=true)
 
 ### Small devices
 
-![Image text](https://raw.github.com/NanJiang327/IFE2018/master/img/small_device.png)
+![Image text](https://github.com/NanJiang327/IFE2018/blob/master/imgs/small_device.png?raw=true)
 
