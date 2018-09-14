@@ -32,7 +32,9 @@ gulp serve
 ## Look
 
 ### Big devices
-![Image text](https://raw.github.com/yourName/repositpry/master/yourprojectName/img-folder/test.jpg)
+![Image text](https://raw.github.com/NanJiang327/IFE2018/master/img/big_device.png)
 
 ### Small devices
+
+![Image text](https://raw.github.com/NanJiang327/IFE2018/master/img/small_device.png)
 
