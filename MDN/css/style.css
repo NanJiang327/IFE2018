@@ -1,0 +1,98 @@
+/* General setup */
+* {
+    box-sizing: border-box;
+  }
+
+  html {
+      font-size: 12px;
+  }
+  
+  body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+  }
+  
+  /* Layout */
+  
+  section {
+    float: left;
+    width: 50%;
+  }
+  
+  aside {
+    float: left;
+    width: 30%;
+  }
+  
+  nav {
+    float: left;
+    width: 20%;
+  }
+  
+  footer {
+    clear: both;
+  }
+  
+  header, section, aside, nav, footer {
+    padding: 20px;
+  }
+  
+  /* header and footer */
+  
+  header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+  }
+  
+  /* WRITE YOUR CODE BELOW HERE */
+  h1 {
+      font-size: 3rem;
+  }
+
+  h2 {
+      font-size: 2.5rem;
+  }
+
+  a:link, 
+  a:visited, 
+  a:hover, 
+  a:active, 
+  a:focus {
+      color: #a66;
+  }
+
+  section > p > a {
+      background: url(https://mdn.mozillademos.org/files/12982/external-link-52.png) no-repeat 100% 0;
+      background-size: 14px 14px;
+      padding-right: 16px;
+  }
+
+  section h2 + p {
+      text-indent: 1.5rem;
+  }
+
+  section > ol {
+    list-style-type: lower-alpha;
+  }
+
+  nav ul {
+      list-style: none;
+  }
+
+  nav ul a {
+      box-sizing: border-box;
+      display: inline-block;
+      height: 5rem;
+      width: 14rem;
+      border: 1px solid #a66;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      line-height: 2.5;
+      font-size: 2rem;
+      text-decoration: none;
+  }
+
+  nav ul li:last-child a {
+      margin-bottom: 0;
+  }
