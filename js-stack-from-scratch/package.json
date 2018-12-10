@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node src",
-    "test": "eslint src && flow"
+    "test": "eslint src && flow && jest --coverage",
+    "precommit": "yarn test",
+    "prepush": "yarn test"
   },
   "author": "",
   "license": "ISC",
@@ -21,14 +23,14 @@
     "babel-eslint": "^7.2.3",
     "babel-jest": "^19.0.0",
     "babel-preset-flow": "^6.23.0",
-    "eslint": "^5.10.0",
-    "eslint-config-airbnb": "^17.1.0",
+    "eslint": "^5.0.0",
+    "eslint-config-alloy": "^1.4.2",
     "eslint-plugin-flowtype": "^2.50.3",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "flow-bin": "^0.41.0",
-    "husky": "^0.13.2",
+    "husky": "^0.13.4",
     "jest": "^19.0.2"
   },
   "browserslist": [
